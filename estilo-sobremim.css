@@ -1,0 +1,191 @@
+/***** LIMPANDO FORMATAÇÕES *****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/***** FORMATAÇÃO GERAL *****/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***** DEFININDO IMAGEM DE FUNDO *****/
+
+body{
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/***** HEADER *****/
+
+#header {
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Meu nome */
+#nome {
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Links do menu */
+#menu {
+    padding: 0 90px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#menu a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+    background-color: rgba(116, 0, 218, 0.278);
+    color: white;
+}
+
+/* Página atual diferente no menu */
+.pagina-atual{
+    background-color: rgba(116, 0, 218, 0.278);
+}
+
+/***** CONTEÚDO PRINCIPAL *****/
+
+#principal {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 40px;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Imagem */
+.foto-perfil {
+    position: absolute;
+    top: -5px;
+    left: -120px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(116, 0, 218, 0.742);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Título */
+.titulo {
+    color: rgb(216, 186, 255);
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    margin-top: 10px;
+    border-bottom: 2px solid rgba(116, 0, 218, 0.742);
+    padding-bottom: 5px;
+}
+
+/* Texto */
+.texto {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.8;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    color: rgb(243, 233, 255);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 0 20px 20px 20px;
+    position: relative;
+    flex: 1;
+}
+
+/***** AJUSTES P/ TELAS MENORES *****/
+
+@media (max-width: 768px) {
+    /* Ajustando o header */
+    #header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    #nome {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    #menu a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Ajustando o conteúdo principal */
+    #principal {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Ajustando a imagem */
+    .foto-perfil {
+        position: static;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .titulo {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .texto {
+        font-size: 16px;
+        padding: 15px;
+        max-width: 90%;
+        text-align: justify;
+    }
+}

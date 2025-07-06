@@ -1,0 +1,256 @@
+/***** LIMPANDO FORMATAÇÕES *****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/***** FORMATAÇÃO GERAL *****/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+body {
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***** DEFININDO IMAGEM DE FUNDO *****/
+
+body{
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/***** HEADER *****/
+
+#header {
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Meu nome */
+#nome {
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Links do menu */
+#menu {
+    padding: 0 90px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#menu a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+    background-color: rgba(116, 0, 218, 0.278);
+    color: white;
+}
+
+/* Página atual diferente no menu */
+.pagina-atual{
+    background-color: rgba(116, 0, 218, 0.278);
+}
+
+/***** CONTEÚDO PRINCIPAL *****/
+
+/* Caixa do formulário */
+.caixa-form {
+    background-color: rgb(58, 0, 102);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Título */
+.titulo {
+    color: rgb(216, 186, 255);
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(116, 0, 218, 0.742);
+    padding-bottom: 5px;
+    width: 100%;
+}
+
+/* Campos de entrada do formulário */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+/* Alinhando o formulário */
+.contato {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Título */
+.titulo {
+    width: 100%;
+    color: rgb(216, 186, 255);
+    font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(116, 0, 218, 0.742);
+    padding-bottom: 5px;
+}
+
+/* Labels (nome, email e mensagem) */
+.informacoes {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.informacoes label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #e0caff;
+}
+
+/* Campos de entrada do formulário */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+}
+
+.nome-usuario, .email-usuario, .mensagem-usuario {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+}
+
+.nome-usuario, .email-usuario{
+    height: 40px;
+}
+
+.mensagem-usuario {
+    height: 250px;
+    resize: vertical;
+}
+
+/* Botão enviar */
+.caixa-botao {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botao {
+    background-color: rgb(116, 0, 218);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: rgb(94, 0, 179);
+}
+
+/***** AJUSTES P/ TELAS MENORES *****/
+
+@media (max-width: 768px) {
+    /* Ajustando o header */
+    #header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    #nome {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    #menu a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Reduzindo o tamanho do título */
+    .titulo {
+        font-size: 20px;
+    }
+
+    /* Ajustando o tamanho do formulário */
+    .caixa-form {
+        padding: 20px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .caixa-botao {
+        justify-content: center;
+    }
+}

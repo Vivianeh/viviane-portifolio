@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NOME DA PÁGINA -->
+    <title>Contato</title>
+    <!-- LINK P/ CSS EXTERNO -->
+    <link rel="stylesheet" type="text/css" href="estilo-contato.css">
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <div id="header">
+
+        <!-- MEU NOME -->
+        <div id="nome">
+            <h1>Viviane Coelho da Silva</h1>
+        </div>
+
+        <!-- LINKS -->
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="sobremim.html">Sobre Mim</a>
+            <a href="formacaoeducacional.html">Formação Educacional</a>
+            <a href="portifolio.html">Portifólio</a>
+            <a href="contato.html" class="pagina-atual">Contato</a>
+        </div>
+        
+    </div>
+
+    <!-- FORMULÁRIO -->
+
+        <div class="contato">
+            <div class="caixa-form">
+                <h2 class="titulo">Entre em Contato</h2>
+                <form class="form">
+
+                    <!-- CAMPO P/ NOME -->
+                    <div class="informacoes">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" class="nome-usuario">
+                    </div>
+
+                    <!-- CAMPO P/ EMAIL -->
+                    <div class="informacoes">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="email-usuario">
+                    </div>
+
+                    <!-- CAMPO P/ MENSAGEM -->
+                    <div class="informacoes">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" class="mensagem-usuario"></textarea>
+                    </div>
+
+                    <!-- BOTÃO ENVIAR -->
+                    <div class="caixa-botao">
+                        <input type="submit" value="Enviar" class="botao">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+/***** LIMPANDO FORMATAÇÃO *****/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/***** FORMATAÇÃO GERAL *****/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/***** DEFININDO IMAGEM DE FUNDO *****/
+
+body{
+    background-image: url('imagens/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/***** HEADER *****/
+
+#header {
+    color: white;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* Meu nome */
+#nome {
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Links do menu */
+#menu {
+    padding: 0 90px;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#menu a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu a:hover {
+    background-color: rgba(116, 0, 218, 0.278);
+    color: white;
+}
+
+/* Página atual diferente no menu */
+.pagina-atual{
+    background-color: rgba(116, 0, 218, 0.278);
+}
+
+/***** CONTEÚDO PRINCIPAL *****/
+
+/* Projetos */
+.projeto1, .projeto2, .projeto3 {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+/* Imagens */
+.projeto1 img, .projeto2 img, .projeto3 img {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Descrição (título e texto) */
+.descricao {
+    width: 600px;
+    background-color: rgba(59, 34, 81, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    height: auto;
+}
+
+/* Título dos projetos */
+.numero-projeto{
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(216, 186, 255);
+    padding-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.titulo-projeto {
+    font-size: 22px;
+    font-weight: bold;
+    color: rgb(216, 186, 255);
+    padding-bottom: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(116, 0, 218, 0.742);
+}
+
+/* Texto */
+.sobre-projeto {
+    width: 100%;
+    font-size: 17px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 20px;
+    color: rgb(240, 240, 240);
+}
+
+/***** AJUSTES P/ TELAS MENORES *****/
+
+@media (max-width: 768px) {
+    /* Ajustando o header */
+    #header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    #nome {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    #menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        align-items: center;
+    }
+
+    #menu a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Ajustando o conteúdo principal */
+    .projeto1, .projeto2, .projeto3 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .projeto1 img, .projeto2 img, .projeto3 img {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .descricao {
+        width: 90%;
+        padding: 20px;
+    }
+}
